@@ -1,0 +1,11 @@
+I want to make an app or system for my computer called Urdu_Poetry. I want it to pick a random Urdu poem every day, then use an LLM (something with Ollama because I want it to be completely local) to translate the poem to english, write an english transliteration, as well as a beautiful analysis and exploration of the poem and it's context etc. I then want it to display the Urdu poem, and under each line have it's transliteration, then it's translation (so like line-by-line), and at the end have the commentary on it. I want it to prepare this every day automatically when I open up my computer (or we could work on that later, for now we could keep it simply something where I give a command and it runs, finding a poem etc. and then presenting the display.
+As for where it should get the urdu poetry from - we should brainstorm a few options. I guess we could load it with a pre-existing store, but I was more thinking it could search the internet maybe or connect it to some urdu poetry archive or repository, like Rekhta or something
+We'll also need to experiment with different local llms to see if there are any that can translate the poems well. The transliteration could be taken directly from Rekhta if we go with that, but we'll need an LLM to translate the poems in english.
+
+
+Before we begin anything, create the files. from which everything will run - urdu_poetry.py and app.py. 
+
+First job:
+Let's try the webscrapping approach. Create a file - webscrapping.py. I want you to write a script that accesses the webpage of top-read-poets (provided below), and selects a poet at random (I think there's 66 poets, so you can use a random number generator to select one), then goes on that poets page, and selects one of the Ghazals (they're given in the section 'Ghazal'). You don't need to open it to see the full selection of Ghazals with 'See All' - there are 5 ghazals that are displayed already on each poets page, you must select one of these. Then open that Ghazal itself, go to the Urdu mode of the page, and copy the poem itself, then print it out. I want you to write the scrapping code for all of this.
+The way to actually run any of this code should be in urdu_poetry.py.
+webpage url: https://www.rekhta.org/poets/top-read-poets
